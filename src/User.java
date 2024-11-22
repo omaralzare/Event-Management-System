@@ -1,32 +1,41 @@
 public class User {
-    protected String name;
-    protected String loginStatus;  //to check if the login was from an admin or organ.. etc
+    protected String currentName;
+    protected char loginStatus;  //to check if the login was from an admin or organ.. etc
     
-    private int[] participantIdList = {224,113,223};
-    private int[] organizerIdList = {244,112,233};
-    private int[] adminIdList = {205,142};
+    private String[][] users={
+        {"111", "pass123", "Participant"},
+        {"222", "org123", "Organizer"},
+        {"333", "admin123", "Admin"}
+    };
     
-    private String[] passwordList = {"224POA","113POA","POA205"};
-    
-    public void login(int id,String password){
-        for(int i=0;i<3;i++){
-            if(id == participantIdList[i] && password.equals(passwordList[i])){
-                loginStatus="participant";
-                return; }
-            else if(id == organizerIdList[i] && password.equals(passwordList[i])){
-                loginStatus="organizer";
-                return; }
-            else if(id == adminIdList[i] && password.equals(passwordList[i])){
-                loginStatus="admin";
-                return; }
+    public void login(String id,String password){
+        for (String[] user : users) {
+            if(users[0][0].equals(id) && users[0][1].equals(password)){
+                loginStatus='p';
+                currentName="Participant";
+            }
+            else if(users[1][0].equals(id) && users[1][1].equals(password)){
+                loginStatus='o';
+                currentName="Organizer";
+            }
+            else if(users[2][0].equals(id) && users[2][1].equals(password)){
+                loginStatus='a';
+                currentName="Admin";
+            }
+            else
+                loginStatus=0;
         }
     }
     
     public void logout(){
-        loginStatus=null;
+        loginStatus=0;
     }
     
     public void updateProfile(String _name){
-        this.name=_name;
+        this.currentName=_name;
+    }
+
+    public char getLoginStatus(){
+        return loginStatus;
     }
 }
