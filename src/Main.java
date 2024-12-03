@@ -7,7 +7,7 @@ public class Main {
        String id;
        String password;
        
-       System.out.print("\t**** Welcome To the Event orgnaizer programm ****\n\t--Please enter your ID and password\n");   //Missing Loop
+       System.out.print("\t**** Welcome To the Event Management System program ****\n\t--Please enter your ID and password\n");   //Missing Loop
        id = input.nextLine();
        password = input.nextLine();
           
