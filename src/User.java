@@ -1,41 +1,50 @@
-public class User {
-    protected String currentName;
-    protected char loginStatus;  //to check if the login was from an admin or organ.. etc
-    
-    private String[][] users={
-        {"111", "pass123", "Participant"},
-        {"222", "org123", "Organizer"},
-        {"333", "admin123", "Admin"}
-    };
-    
-    public void login(String id,String password){
-        for (String[] user : users) {
-            if(users[0][0].equals(id) && users[0][1].equals(password)){
-                loginStatus='p';
-                currentName="Participant";
-            }
-            else if(users[1][0].equals(id) && users[1][1].equals(password)){
-                loginStatus='o';
-                currentName="Organizer";
-            }
-            else if(users[2][0].equals(id) && users[2][1].equals(password)){
-                loginStatus='a';
-                currentName="Admin";
-            }
-            else
-                loginStatus=0;
-        }
-    }
-    
-    public void logout(){
-        loginStatus=0;
-    }
-    
-    public void updateProfile(String _name){
-        this.currentName=_name;
+import java.util.*;
+
+class User {
+    protected int userID;
+    protected String password;
+    protected String name;
+    protected boolean loginStatus;
+
+    public User(int userID, String password, String name) {
+        this.userID = userID;
+        this.password = password;
+        this.name = name;
+        this.loginStatus = false;
     }
 
-    public char getLoginStatus(){
-        return loginStatus;
+    public boolean login(String password) {
+        if (this.password.equals(password)) {
+            loginStatus = true;
+            System.out.println("Login successful.");
+            return true;
+        }
+        System.out.println("Login failed. Incorrect password.");
+        return false;
+    }
+
+    public void logout() {
+        loginStatus = false;
+        System.out.println("Logged out successfully.");
+    }
+
+    public void updateProfile(String newName, String newPassword) {
+        this.name = newName;
+        this.password = newPassword;
+        System.out.println("Profile updated successfully.");
+    }
+
+    public void viewAllEvents(List<Event> events) {
+        System.out.println("All Events:");
+        for (Event event : events) {
+            System.out.println(event.getEventDetails());
+        }
+    }
+
+    public void myProfile() {
+        System.out.println("User Profile:");
+        System.out.println("User ID: " + userID);
+        System.out.println("Name: " + name);
+        System.out.println("Login Status: " + (loginStatus ? "Logged In" : "Logged Out"));
     }
 }
