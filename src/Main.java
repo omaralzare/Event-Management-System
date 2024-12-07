@@ -42,32 +42,21 @@ public class Main {
     }
 
     private static void initializeSystem() {
-        admin = new Admin(1, "admin123", "System Admin");
+        admin = new Admin(1001, "admin123", "System Admin");
 
-        Organizer org1 = new Organizer(2, "org123", "John Doe");
-        Organizer org2 = new Organizer(3, "org456", "Jane Smith");
+        Organizer org1 = new Organizer(1002, "org123", "Omar Saad");
+        Organizer org2 = new Organizer(1003, "org456", "Google");
         organizers.add(org1);
         organizers.add(org2);
         admin.addOrganizer(org1);
         admin.addOrganizer(org2);
 
-        Participant part1 = new Participant(4, "part123", "Alice Johnson");
-        Participant part2 = new Participant(5, "part456", "Bob Williams");
+        Participant part1 = new Participant(1004, "part123", "Ahmad Ali");
+        Participant part2 = new Participant(1005, "part456", "Khaled Haitham");
         participants.add(part1);
         participants.add(part2);
         admin.addParticipant(part1);
         admin.addParticipant(part2);
-
-        Event event1 = new Event(1, "Tech Conference", LocalDate.of(2023, 12, 15), "Convention Center",
-                "Annual technology conference", org1.name, 100);
-        Event event2 = new Event(2, "Music Festival", LocalDate.of(2023, 11, 20), "City Park",
-                "Three-day music extravaganza", org2.name, 1000);
-        events.add(event1);
-        events.add(event2);
-        admin.createEvent(1, "Tech Conference", LocalDate.of(2023, 12, 15), "Convention Center",
-                "Annual technology conference", org1.name, 100);
-        admin.createEvent(2, "Music Festival", LocalDate.of(2023, 11, 20), "City Park",
-                "Three-day music extravaganza", org2.name, 1000);
     }
 
     private static void loginAsAdmin() {
