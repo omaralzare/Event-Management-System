@@ -12,11 +12,14 @@ public class Main {
         initializeSystem();
 
         while (true) {
-            System.out.println("\nWelcome to the Event Management System");
-            System.out.println("1. Login as Admin");
-            System.out.println("2. Login as Organizer");
-            System.out.println("3. Login as Participant");
-            System.out.println("4. Exit");
+            System.out.println("******************************************");
+            System.out.println("  Welcome to the Event Management System  ");
+            System.out.println("******************************************");
+            System.out.println("        1. Login as Admin");
+            System.out.println("        2. Login as Organizer");
+            System.out.println("        3. Login as Participant");
+            System.out.println("        4. Exit");
+            System.out.println("******************************************");
             System.out.print("Enter your choice: ");
 
             int choice = input.nextInt();
@@ -104,16 +107,16 @@ public class Main {
             System.out.println("************************************");
             System.out.println("*            Admin Menu            *");
             System.out.println("************************************");
-            System.out.println("* 1.  Add Organizer                *");
-            System.out.println("* 2.  Remove Organizer             *");
-            System.out.println("* 3.  Add Participant              *");
-            System.out.println("* 4.  Remove Participant           *");
-            System.out.println("* 5.  Show Events by Organizer     *");
-            System.out.println("* 7.  Create Event                 *");
-            System.out.println("* 8.  Delete Event                 *");
-            System.out.println("* 9.  Update Event                 *");
-            System.out.println("* 10. View Reports                 *");
-            System.out.println("* 11. Logout                       *");
+            System.out.println("*   1.  Add Organizer              *");
+            System.out.println("*   2.  Remove Organizer           *");
+            System.out.println("*   3.  Add Participant            *");
+            System.out.println("*   4.  Remove Participant         *");
+            System.out.println("*   5.  Show Events by Organizer   *");
+            System.out.println("*   7.  Create Event               *");
+            System.out.println("*   8.  Delete Event               *");
+            System.out.println("*   9.  Update Event               *");
+            System.out.println("*   10. View Reports               *");
+            System.out.println("*   11. Logout                     *");
             System.out.println("************************************");
             System.out.print("Enter your choice: ");
 
@@ -271,12 +274,12 @@ public class Main {
             System.out.println("************************************");
             System.out.println("*          Organizer Menu          *");
             System.out.println("************************************");
-            System.out.println("* 1. Create Event                  *");
-            System.out.println("* 2. Update Event                  *");
-            System.out.println("* 3. Delete Event                  *");
-            System.out.println("* 4. View Participants             *");
-            System.out.println("* 5. View My Events                *");
-            System.out.println("* 6. Logout                        *");
+            System.out.println("*   1. Create Event                *");
+            System.out.println("*   2. Update Event                *");
+            System.out.println("*   3. Delete Event                *");
+            System.out.println("*   4. View Participants           *");
+            System.out.println("*   5. View My Events              *");
+            System.out.println("*   6. Logout                      *");
             System.out.println("************************************");
             System.out.print("Enter your choice: ");
 
@@ -363,12 +366,12 @@ public class Main {
             System.out.println("************************************");
             System.out.println("*         Participant Menu         *");
             System.out.println("************************************");
-            System.out.println("* 1. View All Events               *");
-            System.out.println("* 2. Register for Event            *");
-            System.out.println("* 3. Cancel Registration           *");
-            System.out.println("* 4. View Registered Events        *");
-            System.out.println("* 5. Update Profile                *");
-            System.out.println("* 6. Logout                        *");
+            System.out.println("*   1. View All Events             *");
+            System.out.println("*   2. Register for Event          *");
+            System.out.println("*   3. Cancel Registration         *");
+            System.out.println("*   4. View Registered Events      *");
+            System.out.println("*   5. Update Profile              *");
+            System.out.println("*   6. Logout                      *");
             System.out.println("************************************");
             System.out.print("Enter your choice: ");
 
